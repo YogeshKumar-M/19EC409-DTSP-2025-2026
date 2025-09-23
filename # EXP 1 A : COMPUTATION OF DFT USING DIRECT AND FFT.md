@@ -64,3 +64,4 @@ title('Phase Spectrum');
 
 
 # RESULT: 
+Thus the DFT and FFT of given sequence is obtained.
