@@ -21,7 +21,6 @@ if size(x, 2) > 1 then
 x = x(:,1);
 end
 // -------------------------
--------------------------
 cut_samples = round(2 * fs);
 if length(x) > cut_samples then
 x = x(cut_samples+1:$);
@@ -49,8 +48,7 @@ subplot(2,1,2);
 plot(f, atan(imag(Y), real(Y))); // Phase spectrum
 xtitle("Phase Spectrum of Audio Signal", "Frequency (Hz)", "Phase(radians)");
 // -------------------------
-// Step 6: Optional - Remove unwanted frequencies (e.g., below 100 Hz
-and above 5000 Hz)
+// Step 6: Optional - Remove unwanted frequencies (e.g., below 100 Hzand above 5000 Hz)
 // -------------------------
 Y_filtered = Y;
 Y_filtered(f < 100 | f > 5000) = 0;
@@ -60,8 +58,7 @@ x_filtered = real(fft(Y_filtered, 1));
 disp("Playing filtered audio...");
 playsnd(x_filtered, fs);
 // Save filtered audio (optional)
-wavwrite(x_filtered, fs,
-"C:\\Users\\acer\\Downloads\\waptt_filtered.wav");
+wavwrite(x_filtered, fs,"C:\\Users\\acer\\Downloads\\waptt_filtered.wav");
 // analyze audio signal
 ```
 # OUTPUT: 
